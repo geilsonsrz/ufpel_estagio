@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+@import './escuro.scss';
+@import './claro.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+body {
+    transition: ease .7s;
+
+    .barraSuperior {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        transition: ease .4s;
+        background: transparent;
+        z-index: 10;
+
+        .nomeEscola {
+            transform: scale(1.5);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+
+    .tema {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 1.5rem;
+        height: 1rem;
+        z-index: 10;
+        cursor: pointer;
+
+        .ln {
+            position: relative;
+            width: 100%;
+            height: .1rem;
+            transition: .5s ease-in-out;
+            border-radius: 1rem;
+            z-index: 5;
+        }
+    }
+}
+
+.menu.ativo {
+    transition: .5s;
+
+    .ln1 {
+        transform: rotate(-45deg) translate(-0.2rem, .2rem);
+    }
+
+    .ln2 {
+        opacity: 0;
+    }
+
+    .ln3 {
+        transform: rotate(45deg) translate(-0.4rem, -0.4rem);
+    }
+}
+
+.areaMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 30rem;
+    height: 30rem;
+    top: 10%;
+    left: calc(50% - 15em);
+    background: transparent;
+    list-style: none;
+    background: transparent;
+
+    .itemMenu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        transition: 0.2s;
+        transform: rotate(calc(-360deg/6 * var(--i)));
+        transform-origin: 20rem;
+        transition-delay: calc(0.2s * var(--i));
+        scale: 0;
+
+        .subItem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+            height: 5rem;
+            position: relative;
+            transform: rotate(calc(360deg/6 * var(--i)));
+            transition: .2s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
+
+.areaAtiva {
+
+    .itemMenu {
+        scale: 1;
+    }
+
+    .subItem:hover {
+        font-size: 1.5rem;
+    }
+
+}
+
+.secao {
+    width: 100%;
+    height: 100vh;
+
+}
+.secao02 {
+    background: red;
+}
+
+.secao03 {
+    background: blue;
+}
