@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap");
 body.escuro {
-  background: #020202;
-  color: #f2f2f2;
+  background: #000;
+  color: #fff;
 }
 body.escuro .lua {
   display: none;
@@ -10,13 +10,25 @@ body.escuro .ln {
   background: #f2f2f2;
 }
 body.escuro .subItem {
-  background: #f2f2f2;
-  color: #000;
+  color: #0ccdfd;
+  background: rgba(12, 205, 253, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(12, 205, 253, 0.2);
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+body.escuro .mascara {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+body.escuro .divisor {
+  background-image: linear-gradient(to right, transparent, #fff, transparent);
 }
 
 body.claro {
-  background: #f0f0f0;
-  color: #020202;
+  background: #fff;
+  color: #000;
 }
 body.claro .sol {
   display: none;
@@ -25,14 +37,20 @@ body.claro .ln {
   background: #020202;
 }
 body.claro .subItem {
-  border-top: 0.1rem solid rgba(150, 150, 150, 0.5);
-  border-right: 0.1rem solid rgba(0, 0, 0, 0.5);
-  border-left: 0.1rem solid rgba(150, 150, 150, 0.5);
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5);
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: rgba(242, 242, 242, 0.05);
-  backdrop-filter: blur(0.2rem);
+  color: #000;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  border: 0.1rem solid rgba(255, 255, 255, 0.4);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+}
+body.claro .areaAtiva .subItem:hover {
+  color: #007;
+  background: rgba(12, 205, 253, 0.2);
+}
+body.claro .divisor {
+  background-image: linear-gradient(to right, transparent, #000, transparent);
 }
 
 * {
@@ -50,14 +68,11 @@ body .barraSuperior {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   padding: 1rem;
   transition: ease 0.4s;
   background: transparent;
   z-index: 10;
-}
-body .barraSuperior .nomeEscola {
-  transform: scale(1.5);
 }
 body .barraSuperior .navbar {
   display: flex;
@@ -80,7 +95,7 @@ body .menu {
   flex-direction: column;
   width: 1.5rem;
   height: 1rem;
-  z-index: 10;
+  z-index: 1000;
   cursor: pointer;
 }
 body .menu .ln {
@@ -90,6 +105,48 @@ body .menu .ln {
   transition: 0.5s ease-in-out;
   border-radius: 1rem;
   z-index: 5;
+}
+body .secao {
+  width: 100%;
+  min-height: 100vh;
+}
+body .secao01 .cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+body .secao01 .cabecalho .logo {
+  position: absolute;
+  max-width: 5em;
+  top: 1%;
+  left: 1%;
+}
+body .mascara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  user-select: none;
+  mix-blend-mode: screen;
+}
+body .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(2);
 }
 
 .menu.ativo {
@@ -125,8 +182,8 @@ body .menu .ln {
   justify-content: center;
   left: 0;
   transition: 0.2s;
-  transform: rotate(calc(-60deg * var(--i)));
-  transform-origin: 20rem;
+  transform: rotate(calc(90deg * var(--i)));
+  transform-origin: 15rem;
   transition-delay: calc(0.2s * var(--i));
   scale: 0;
 }
@@ -134,13 +191,16 @@ body .menu .ln {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding: 1.5rem;
   width: 10rem;
   height: 5rem;
-  position: relative;
-  transform: rotate(calc(60deg * var(--i)));
+  transform: rotate(calc(-90deg * var(--i)));
   transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
+  backdrop-filter: blur(0.2rem);
+  z-index: 1000;
 }
 
 .areaAtiva .itemMenu {
@@ -148,19 +208,21 @@ body .menu .ln {
 }
 .areaAtiva .subItem:hover {
   font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.secao {
+.divisor {
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 0.1rem;
 }
 
 .secao02 {
-  background: red;
-}
-
-.secao03 {
-  background: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1em 3em 1em;
 }
 
 /*# sourceMappingURL=index.css.map */

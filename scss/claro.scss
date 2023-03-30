@@ -1,7 +1,7 @@
 body.claro {
 
-    background: #f0f0f0;
-    color: #020202;
+    background: #fff;
+    color: #000;
 
     .sol {
         display: none;
@@ -12,14 +12,28 @@ body.claro {
     }
 
     .subItem {
-        border-top: .1rem solid rgba(150, 150, 150, .5);
-        border-right: .1rem solid rgba(#000, .5);
-        border-left: .1rem solid rgba(150, 150, 150, .5);
-        border-bottom: .1rem solid rgba(#000, .5);
-        border-radius: 1rem;
-        padding: 1rem;
-        background-color: rgba(#f2f2f2, 0.05);
-        backdrop-filter: blur(.2rem);
+        color: #000;
+        background: rgba(#000, .1);
+        box-shadow: 0 .5rem 2rem rgba(#000, .2);
+        border:  .1rem solid rgba(#fff, .4);
+        border-right: .1rem solid rgba(#fff, .2);
+        border-bottom: .1rem solid rgba(#fff, .2);
+        border-radius: .5rem;
+    }
+
+    .areaAtiva {
+        .subItem:hover {
+            color: #007;
+            background: rgba(#0ccdfd, .2);
+        }
+    }
+
+    .divisor {
+        background-image: linear-gradient(
+        to right,
+        transparent,
+        #000,
+        transparent);
     }
 
 }

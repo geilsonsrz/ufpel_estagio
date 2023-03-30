@@ -1,8 +1,7 @@
 body.escuro {
 
-    background: #020202;
-    color: #f2f2f2;
-
+    background: #000;
+    color: #fff;
 
     .lua {
         display: none;
@@ -13,7 +12,25 @@ body.escuro {
     }
 
     .subItem {
-        background: #f2f2f2;
-        color: #000;
+        color: #0ccdfd;
+        background: rgba(#0ccdfd, .1);
+        box-shadow: 0 .5rem 2rem rgba(#0ccdfd, .2);
+        border:  .1rem solid rgba(#000, .4);
+        border-right: .1rem solid rgba(#000, .2);
+        border-bottom: .1rem solid rgba(#000, .2);
+        border-radius: .5rem;
+    }
+
+    .mascara {
+        filter: invert(1);
+        mix-blend-mode: multiply;
+    }
+
+    .divisor {
+        background-image: linear-gradient(
+        to right,
+        transparent,
+        #fff,
+        transparent);
     }
 }

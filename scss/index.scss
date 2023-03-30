@@ -17,15 +17,11 @@ body {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: end;
         padding: 1rem;
         transition: ease .4s;
         background: transparent;
         z-index: 10;
-
-        .nomeEscola {
-            transform: scale(1.5);
-        }
 
         .navbar {
             display: flex;
@@ -51,7 +47,7 @@ body {
         flex-direction: column;
         width: 1.5rem;
         height: 1rem;
-        z-index: 10;
+        z-index: 1000;
         cursor: pointer;
 
         .ln {
@@ -63,6 +59,55 @@ body {
             z-index: 5;
         }
     }
+
+    .secao {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .secao01 {
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+
+            .logo {
+                position: absolute;
+                max-width: 5em;
+                top: 1%;
+                left: 1%;
+            }
+        }
+    }
+
+    .mascara {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        user-select: none;
+        mix-blend-mode: screen;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(2);
 }
 
 .menu.ativo {
@@ -101,8 +146,8 @@ body {
         justify-content: center;
         left: 0;
         transition: 0.2s;
-        transform: rotate(calc(-360deg/6 * var(--i)));
-        transform-origin: 20rem;
+        transform: rotate(calc(360deg/4 * var(--i)));
+        transform-origin: 15rem;
         transition-delay: calc(0.2s * var(--i));
         scale: 0;
 
@@ -110,38 +155,41 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            padding: 1.5rem;
             width: 10rem;
             height: 5rem;
-            position: relative;
-            transform: rotate(calc(360deg/6 * var(--i)));
+            transform: rotate(calc(-360deg/4 * var(--i)));
             transition: .2s;
             cursor: pointer;
             text-decoration: none;
+            backdrop-filter: blur(.2rem);
+            z-index: 1000;
         }
     }
 }
 
 .areaAtiva {
-
     .itemMenu {
         scale: 1;
     }
 
     .subItem:hover {
         font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
     }
-
 }
 
-.secao {
+.divisor {
+    position: absolute;
     width: 100%;
-    height: 100vh;
-
+    height: .1rem;
 }
+
 .secao02 {
-    background: red;
-}
-
-.secao03 {
-    background: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em 3em 1em;
 }
