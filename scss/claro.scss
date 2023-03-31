@@ -12,19 +12,18 @@ body.claro {
     }
 
     .subItem {
-        color: #000;
-        background: rgba(#000, .1);
-        box-shadow: 0 .5rem 2rem rgba(#000, .2);
-        border:  .1rem solid rgba(#fff, .4);
-        border-right: .1rem solid rgba(#fff, .2);
-        border-bottom: .1rem solid rgba(#fff, .2);
+        color: #007;
+        background: rgba(#fff, .1);
+        box-shadow: 0 .5rem 2rem rgba(#fff, .2);
+        border:  .1rem solid rgba(#000, .4);
+        border-right: .1rem solid rgba(#000, .3);
+        border-bottom: .1rem solid rgba(#000, .3);
         border-radius: .5rem;
     }
 
     .areaAtiva {
         .subItem:hover {
-            color: #007;
-            background: rgba(#0ccdfd, .2);
+            background: rgba(#0ccdfd, .4);
         }
     }
 
@@ -34,6 +33,18 @@ body.claro {
         transparent,
         #000,
         transparent);
+    }
+
+    .moldura {
+        .foto {
+            border: .3rem solid #ffbd59;
+        }
+    }
+    .moldura-1 {
+        background: rgba(#0ccdfd, .5);
+    }
+    .moldura-2 {
+        background: rgba(#ff66c4, .5);
     }
 
 }

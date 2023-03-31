@@ -12,13 +12,19 @@ body.escuro {
     }
 
     .subItem {
-        color: #0ccdfd;
+        color: #fff;
         background: rgba(#0ccdfd, .1);
         box-shadow: 0 .5rem 2rem rgba(#0ccdfd, .2);
         border:  .1rem solid rgba(#000, .4);
-        border-right: .1rem solid rgba(#000, .2);
-        border-bottom: .1rem solid rgba(#000, .2);
+        border-right: .1rem solid rgba(#000, .4);
+        border-bottom: .1rem solid rgba(#000, .4);
         border-radius: .5rem;
+    }
+
+    .areaAtiva {
+        .subItem:hover {
+            color: #0ccdfd;
+        }
     }
 
     .mascara {

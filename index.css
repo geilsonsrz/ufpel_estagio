@@ -10,13 +10,16 @@ body.escuro .ln {
   background: #f2f2f2;
 }
 body.escuro .subItem {
-  color: #0ccdfd;
+  color: #fff;
   background: rgba(12, 205, 253, 0.1);
   box-shadow: 0 0.5rem 2rem rgba(12, 205, 253, 0.2);
   border: 0.1rem solid rgba(0, 0, 0, 0.4);
-  border-right: 0.1rem solid rgba(0, 0, 0, 0.2);
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.4);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
+}
+body.escuro .areaAtiva .subItem:hover {
+  color: #0ccdfd;
 }
 body.escuro .mascara {
   filter: invert(1);
@@ -37,20 +40,28 @@ body.claro .ln {
   background: #020202;
 }
 body.claro .subItem {
-  color: #000;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
-  border: 0.1rem solid rgba(255, 255, 255, 0.4);
-  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  color: #007;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.2);
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
 }
 body.claro .areaAtiva .subItem:hover {
-  color: #007;
-  background: rgba(12, 205, 253, 0.2);
+  background: rgba(12, 205, 253, 0.4);
 }
 body.claro .divisor {
   background-image: linear-gradient(to right, transparent, #000, transparent);
+}
+body.claro .moldura .foto {
+  border: 0.3rem solid #ffbd59;
+}
+body.claro .moldura-1 {
+  background: rgba(12, 205, 253, 0.5);
+}
+body.claro .moldura-2 {
+  background: rgba(255, 102, 196, 0.5);
 }
 
 * {
@@ -139,7 +150,7 @@ body .video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 .titulo {
@@ -147,6 +158,11 @@ body .video {
   align-items: center;
   justify-content: center;
   transform: scale(2);
+  z-index: -1;
+}
+
+.tituloPag {
+  z-index: 1;
 }
 
 .menu.ativo {
@@ -199,7 +215,7 @@ body .video {
   transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
-  backdrop-filter: blur(0.2rem);
+  backdrop-filter: blur(0.3rem);
   z-index: 1000;
 }
 
@@ -216,6 +232,7 @@ body .video {
   position: absolute;
   width: 100%;
   height: 0.1rem;
+  z-index: -1;
 }
 
 .secao02 {
@@ -223,6 +240,39 @@ body .video {
   flex-direction: column;
   align-items: center;
   padding: 3em 1em 3em 1em;
+}
+.secao02 .moldura .foto {
+  width: 20rem;
+  position: relative;
+  margin-top: 2rem;
+  left: -75%;
+  border-radius: 1rem;
+  z-index: -2;
+}
+.secao02 .moldura-1 {
+  position: absolute;
+  width: 20rem;
+  height: 23rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  left: 19%;
+  z-index: -3;
+}
+.secao02 .moldura-2 {
+  position: absolute;
+  width: 20rem;
+  height: 23rem;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  left: 22%;
+  z-index: -3;
+}
+.secao02 .txt {
+  position: absolute;
+  margin-top: 5rem;
+  width: 40%;
+  right: 10%;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=index.css.map */
