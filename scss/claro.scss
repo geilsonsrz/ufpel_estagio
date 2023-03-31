@@ -46,5 +46,22 @@ body.claro {
     .moldura-2 {
         background: rgba(#ff66c4, .5);
     }
+    
+    .imgClaro {
+        border: .1rem solid #000;
+    }
+    .imgEscuro {display: none;}
+
+    .btn {
+        color: #000;
+
+        rect {
+            stroke: #000;
+        }
+    }
+
+    .semanaDivisor {
+        background-image: linear-gradient(to bottom, #000, transparent);
+    }
 
 }

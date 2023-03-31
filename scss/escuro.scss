@@ -39,4 +39,21 @@ body.escuro {
         #fff,
         transparent);
     }
+
+    .imgEscuro {
+        border: .1rem solid #fff;
+    }
+    .imgClaro {display: none;}
+
+    .btn {
+        color: #fff;
+
+        rect {
+            stroke: #fff;
+        }
+    }
+
+    .semanaDivisor {
+        background-image: linear-gradient(to bottom, #fff, transparent);
+    }
 }

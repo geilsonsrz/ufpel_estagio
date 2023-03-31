@@ -21,9 +21,8 @@ function clicouMenu(){
 menu.addEventListener('click', clicouMenu)
 
 
-// Scroll suave
+// Scroll suave seções
 const itemMenu = document.querySelectorAll('.areaMenu li a[href^="#"]')
-
 function scrollItem(event) {
     event.preventDefault()
     const elemento = event.target
@@ -36,7 +35,7 @@ function scrollItem(event) {
         behavior: "smooth" // determina o comportamento do scroll / smooth é suáve.
     })
 }
-
+// Função scroll das seções
 itemMenu.forEach( item => {
     item.addEventListener('click', scrollItem)
 })

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400&display=swap");
 body.escuro {
   background: #000;
   color: #fff;
@@ -27,6 +28,21 @@ body.escuro .mascara {
 }
 body.escuro .divisor {
   background-image: linear-gradient(to right, transparent, #fff, transparent);
+}
+body.escuro .imgEscuro {
+  border: 0.1rem solid #fff;
+}
+body.escuro .imgClaro {
+  display: none;
+}
+body.escuro .btn {
+  color: #fff;
+}
+body.escuro .btn rect {
+  stroke: #fff;
+}
+body.escuro .semanaDivisor {
+  background-image: linear-gradient(to bottom, #fff, transparent);
 }
 
 body.claro {
@@ -63,12 +79,27 @@ body.claro .moldura-1 {
 body.claro .moldura-2 {
   background: rgba(255, 102, 196, 0.5);
 }
+body.claro .imgClaro {
+  border: 0.1rem solid #000;
+}
+body.claro .imgEscuro {
+  display: none;
+}
+body.claro .btn {
+  color: #000;
+}
+body.claro .btn rect {
+  stroke: #000;
+}
+body.claro .semanaDivisor {
+  background-image: linear-gradient(to bottom, #000, transparent);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Serif", serif;
+  font-family: "Sofia Sans", sans-serif;
 }
 
 body {
@@ -157,7 +188,7 @@ body .video {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(2);
+  font-size: 2em;
   z-index: -1;
 }
 
@@ -208,6 +239,7 @@ body .video {
   align-items: center;
   justify-content: center;
   position: relative;
+  font-weight: 600;
   padding: 1.5rem;
   width: 10rem;
   height: 5rem;
@@ -273,6 +305,87 @@ body .video {
   width: 40%;
   right: 10%;
   z-index: -1;
+}
+
+.secao03 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+.secao03 .titulo {
+  margin-bottom: 2rem;
+}
+.secao03 .conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.secao03 .conteiner .img {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem;
+}
+.secao03 .conteinerImpar .semanaDivisor {
+  position: absolute;
+  width: 0.2rem;
+  height: 25rem;
+  left: 45%;
+  border-radius: 0.1rem;
+}
+.secao03 .conteinerImpar .textoSemana {
+  width: 30rem;
+  height: 20rem;
+}
+.secao03 .conteinerImpar .textoSemana h2 {
+  position: relative;
+  top: -2rem;
+  right: 2rem;
+  font-size: 1.5em;
+}
+.secao03 .conteinerImpar .textoSemana h3 {
+  position: relative;
+  top: -1rem;
+  font-size: 1.2em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 2rem;
+  height: 3rem;
+  position: relative;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.3 ease all;
+  background-color: none;
+  margin-top: 2rem;
+  text-decoration: none;
+  z-index: 1;
+}
+.btn svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+.btn rect {
+  width: 100%;
+  height: 100%;
+  stroke-width: 0.3rem;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: 1s all ease-in-out;
+}
+
+.btn:hover rect {
+  stroke-dashoffset: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
