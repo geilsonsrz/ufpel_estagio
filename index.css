@@ -243,9 +243,9 @@ body .video {
 }
 .secao02 .moldura .foto {
   width: 20rem;
-  position: relative;
+  position: absolute;
   margin-top: 2rem;
-  left: -75%;
+  left: 20%;
   border-radius: 1rem;
   z-index: -2;
 }
