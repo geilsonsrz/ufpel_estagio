@@ -142,7 +142,7 @@ body .menu .ln {
   height: 0.1rem;
   transition: 0.5s ease-in-out;
   border-radius: 1rem;
-  z-index: 5;
+  z-index: 10;
 }
 body .secao {
   width: 100%;
@@ -212,7 +212,7 @@ body .video {
   justify-content: center;
   position: fixed;
   width: 0rem;
-  height: 1rem;
+  height: 0rem;
   top: 50%;
   left: calc(50% - 15em);
   background: rgba(0, 0, 0, 0.3);
@@ -230,7 +230,6 @@ body .video {
   transform-origin: 15rem;
   transition-delay: calc(0.2s * var(--i));
   scale: 0;
-  z-index: 1000;
 }
 .areaMenu .itemMenu .subItem {
   display: flex;
@@ -246,7 +245,6 @@ body .video {
   cursor: pointer;
   text-decoration: none;
   backdrop-filter: blur(0.3rem);
-  z-index: 1000;
 }
 
 .areaAtiva .itemMenu {
@@ -262,7 +260,6 @@ body .video {
   position: absolute;
   width: 100%;
   height: 0.1rem;
-  z-index: -1;
 }
 
 .btn {
@@ -307,41 +304,41 @@ body .video {
 .secao02 {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 3em 1em 3em 1em;
 }
-.secao02 .moldura .foto {
-  width: 20rem;
-  position: absolute;
-  margin-top: 2rem;
-  left: 20%;
-  border-radius: 1rem;
-  z-index: -2;
+.secao02 .titulo {
+  margin-bottom: 2em;
 }
-.secao02 .moldura-1 {
-  position: absolute;
-  width: 20rem;
-  height: 23rem;
-  border-radius: 1rem;
-  margin-top: 1rem;
-  left: 19%;
-  z-index: -3;
+.secao02 .bloco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.secao02 .moldura-2 {
+.secao02 .bloco .moldura .foto {
+  position: relative;
+  width: 20rem;
+  border-radius: 1rem;
+}
+.secao02 .bloco .moldura .moldura-1 {
   position: absolute;
   width: 20rem;
   height: 23rem;
   border-radius: 1rem;
-  margin-top: 4rem;
-  left: 22%;
-  z-index: -3;
+  margin: -1em -1em;
+  transform: translate(-2em, -2em);
 }
-.secao02 .txt {
+.secao02 .bloco .moldura .moldura-2 {
   position: absolute;
-  margin-top: 5rem;
+  width: 20rem;
+  height: 23rem;
+  border-radius: 1rem;
+  margin: 1em 1em;
+  transform: translate(2em, 2em);
+}
+.secao02 .bloco .txt {
+  position: relative;
   width: 40%;
-  right: 10%;
-  z-index: -1;
 }
 
 .secao03 {
