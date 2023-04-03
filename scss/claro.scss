@@ -14,7 +14,7 @@ body.claro {
     .subItem {
         color: #007;
         background: rgba(#fff, .1);
-        box-shadow: 0 .5rem 2rem rgba(#fff, .2);
+        box-shadow: 0 .5rem 2rem rgba(#000, .4);
         border:  .1rem solid rgba(#000, .4);
         border-right: .1rem solid rgba(#000, .3);
         border-bottom: .1rem solid rgba(#000, .3);
@@ -23,7 +23,7 @@ body.claro {
 
     .areaAtiva {
         .subItem:hover {
-            background: rgba(#0ccdfd, .4);
+            background: rgba(#0ccdfd, .2);
         }
     }
 
@@ -46,11 +46,6 @@ body.claro {
     .moldura-2 {
         background: rgba(#ff66c4, .5);
     }
-    
-    .imgClaro {
-        border: .1rem solid #000;
-    }
-    .imgEscuro {display: none;}
 
     .btn {
         color: #000;
@@ -62,6 +57,12 @@ body.claro {
 
     .semanaDivisor {
         background-image: linear-gradient(to bottom, #000, transparent);
+    }
+
+    .copyright{
+        p {
+            border: .1em solid #000;
+        }
     }
 
 }

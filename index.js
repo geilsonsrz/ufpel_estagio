@@ -39,3 +39,4 @@ function scrollItem(event) {
 itemMenu.forEach( item => {
     item.addEventListener('click', scrollItem)
 })
+

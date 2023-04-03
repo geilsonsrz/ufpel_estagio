@@ -40,10 +40,9 @@ body.escuro {
         transparent);
     }
 
-    .imgEscuro {
-        border: .1rem solid #fff;
+    .imgFiltro {
+        filter: invert(1);
     }
-    .imgClaro {display: none;}
 
     .btn {
         color: #fff;
@@ -55,5 +54,11 @@ body.escuro {
 
     .semanaDivisor {
         background-image: linear-gradient(to bottom, #fff, transparent);
+    }
+
+    .copyright{
+        p {
+            border: .1em solid #fff;
+        }
     }
 }

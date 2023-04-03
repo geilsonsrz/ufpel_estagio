@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400&display=swap');
-
 @import './escuro.scss';
 @import './claro.scss';
 
@@ -111,6 +108,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2em;
+    text-transform: uppercase;
     z-index: -1;
 }
 
@@ -139,13 +137,13 @@ body {
     align-items: center;
     justify-content: center;
     position: fixed;
-    width: 30rem;
-    height: 30rem;
-    top: 10%;
+    width: 0rem;
+    height: 1rem;
+    top: 50%;
     left: calc(50% - 15em);
-    background: transparent;
+    background: rgba(#000, .3);
     list-style: none;
-    background: transparent;
+    z-index: 1000;
 
     .itemMenu {
         position: absolute;
@@ -158,6 +156,7 @@ body {
         transform-origin: 15rem;
         transition-delay: calc(0.2s * var(--i));
         scale: 0;
+        z-index: 1000;
 
         .subItem {
             display: flex;
@@ -179,6 +178,7 @@ body {
 }
 
 .areaAtiva {
+
     .itemMenu {
         scale: 1;
     }
@@ -197,6 +197,49 @@ body {
     z-index: -1;
 }
 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 2rem;
+    height: 3rem;
+    position: relative;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: .3 ease all;
+    background-color: none;
+    text-decoration: none;
+    z-index: 1;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: none;
+    }
+
+    rect {
+        width: 100%;
+        height: 100%;
+        stroke-width: .3rem;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        transition: 1s all ease-in-out;
+    }
+}
+
+.btn:hover {
+    rect {
+        stroke-dashoffset: 0;
+    }
+}
+
 .secao02 {
     display: flex;
     flex-direction: column;
@@ -204,6 +247,7 @@ body {
     padding: 3em 1em 3em 1em;
 
     .moldura {
+
         .foto {
             width: 20rem;
             position: absolute;
@@ -248,91 +292,177 @@ body {
     flex-direction: column;
     padding: 2rem 3rem;
 
-    .titulo {
-        margin-bottom: 2rem;
+    .atualizacao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+        font-style: italic;
+        font-weight: 600;
+        z-index: -1;
     }
 
     .conteiner {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin: 3rem 0;
+
+        .areaSemana {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .img {
             width: 20rem;
             height: 30rem;
             border-radius: 1rem;
+            transition: .7s all;
         }
-    }
 
-    .conteinerImpar {
         .semanaDivisor {
             position: absolute;
             width: .2rem;
             height: 25rem;
-            left: 45%;
-            border-radius: .1rem;
+            border-radius: 1rem;
+            z-index: -1;
         }
 
         .textoSemana {
             width: 30rem;
-            height: 20rem;
+            height: auto;
+            margin-bottom: 2rem;
+            z-index: -1;
+        }
+
+        .textoSemana {
 
             h2 {
                 position: relative;
                 top: -2rem;
-                right: 2rem;
+                left: 0%;
                 font-size: 1.5em;
             }
+
             h3 {
                 position: relative;
                 top: -1rem;
                 font-size: 1.2em;
             }
         }
+    }
 
+    .conteinerImpar {
+        .semanaDivisor {
+            left: 45%;
+        }
+
+        .areaSemana {
+            align-items: start;
+        }
+    }
+
+    .conteinerPar {
+        .semanaDivisor {
+            left: 55%;
+        }
+
+        .areaSemana {
+            align-items: end;
+        }
     }
 }
 
-.btn {
-    display: inline-flex;
+.secao04 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 2em 3em;
+    z-index: 10;
+
+    .box {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+    }
+
+    .carta {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15em;
+        height: 20em;
+        z-index: 5;
+    }
+
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: .5s ease-in-out all;
+        border: .1em solid #000;
+        border-radius: 1em;
+        box-shadow: 0 0.4em 0.7em #000;
+    }
+
+    .frente {
+        transform: perspective(30em) rotateY(0deg);
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .costa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: perspective(30em) rotateY(180deg);
+        padding: 1em;
+        background: rgba(#007, .2);
+    }
+
+    .carta:hover {
+        .frente {
+            transform: perspective(30em) rotateY(180deg);
+        }
+
+        .costa {
+            transform: perspective(30em) rotateY(360deg);
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 3em;
+
+    .parte {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.copyright{
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    padding: 2rem;
-    height: 3rem;
-    position: relative;
-    border: none;
-    border-radius: .3rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 700;
-    transition: .3 ease all;
-    background-color: none;
-    margin-top: 2rem;
-    text-decoration: none;
-    z-index: 1;
+    font-weight: 500;
+    padding-bottom: 1em;
 
-    svg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        fill: none;
-    }
-
-    rect {
-        width: 100%;
-        height: 100%;
-        stroke-width: .3rem;
-        stroke-dasharray: 500;
-        stroke-dashoffset: 500;
-        transition: 1s all ease-in-out;
-    }
-
-}
-.btn:hover {
-    rect {
-        stroke-dashoffset: 0;
+    p {
+        padding: .5em;
+        border-radius: 1em;
     }
 }
