@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 body.escuro {
   background: #000;
   color: #fff;
@@ -402,6 +403,9 @@ body .video {
 .secao03 .conteinerImpar .areaSemana {
   align-items: start;
 }
+.secao03 .conteinerPar .imgTelaP {
+  display: none;
+}
 .secao03 .conteinerPar .semanaDivisor {
   left: 55%;
 }
@@ -482,12 +486,200 @@ footer .parte {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
   padding-bottom: 1em;
 }
 .copyright p {
   padding: 0.5em;
   border-radius: 1em;
+}
+
+@media screen and (max-width: 425px) {
+  body .barraSuperior {
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.3);
+    width: auto;
+  }
+  body .barraSuperior .navbar {
+    gap: 1em;
+  }
+  body .secao01 .cabecalho {
+    padding: 0.1rem;
+  }
+  body .secao01 .cabecalho .logo {
+    display: none;
+  }
+  .mascara {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .titulo {
+    font-size: 1.2em;
+  }
+  .tituloPag {
+    display: none;
+  }
+  .areaMenu {
+    position: absolute;
+    top: calc(100vh - 20%);
+    left: 0;
+    z-index: 1;
+  }
+  .areaMenu .itemMenu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.5em;
+    transition: 0.2s;
+    transform: rotate(calc(90deg * var(--i)));
+    transform-origin: 8em;
+    transition-delay: calc(0.2s * var(--i));
+    scale: 0;
+  }
+  .areaMenu .itemMenu .subItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 600;
+    padding: 1em;
+    width: auto;
+    height: auto;
+    transform: rotate(calc(-90deg * var(--i)));
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    backdrop-filter: blur(0.3rem);
+  }
+  .areaAtiva .subItem:hover {
+    font-size: 1.1rem;
+  }
+  .divisor {
+    display: none;
+  }
+  .secao02 {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0.8em 1em 0.8em;
+  }
+  .secao02 .titulo {
+    margin-bottom: 1.2em;
+  }
+  .secao02 .bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .secao02 .bloco .moldura {
+    margin-bottom: 1.5em;
+  }
+  .secao02 .bloco .moldura .foto {
+    width: 15em;
+    border-radius: 1rem;
+  }
+  .secao02 .bloco .moldura .moldura-1 {
+    width: 15em;
+    height: 15em;
+    margin: -0.5em -0.5em;
+    transform: translate(-0.5em, -0.5em);
+  }
+  .secao02 .bloco .moldura .moldura-2 {
+    width: 15em;
+    height: 15em;
+    margin: 3em 0.5em;
+    transform: translate(0.5em, 0.5em);
+  }
+  .secao02 .bloco .txt {
+    position: relative;
+    width: 90%;
+  }
+  .secao03 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .secao03 .atualizacao {
+    font-weight: 500;
+  }
+  .secao03 .conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em 0;
+  }
+  .secao03 .conteiner .areaSemana {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secao03 .conteiner .img {
+    width: 15rem;
+    height: auto;
+    margin: 2em 0;
+  }
+  .secao03 .conteiner .semanaDivisor {
+    display: none;
+  }
+  .secao03 .conteiner .textoSemana {
+    width: 90%;
+    height: auto;
+    margin-bottom: 2rem;
+    z-index: -1;
+  }
+  .secao03 .conteiner .textoSemana h2 {
+    font-size: 1.2em;
+  }
+  .secao03 .conteiner .textoSemana h3 {
+    font-size: 1em;
+  }
+  .secao03 .conteinerImpar .semanaDivisor {
+    left: 0%;
+  }
+  .secao03 .conteinerImpar .areaSemana {
+    align-items: center;
+  }
+  .secao03 .conteinerPar .imgFiltro {
+    display: none;
+  }
+  .secao03 .conteinerPar .imgTelaP {
+    display: inline;
+  }
+  .secao03 .conteinerPar .semanaDivisor {
+    left: 0%;
+  }
+  .secao03 .conteinerPar .areaSemana {
+    align-items: center;
+  }
+  .secao04 {
+    padding: 1em 1.5em;
+  }
+  .secao04 .box {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em 1.5em;
+    gap: 1em;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

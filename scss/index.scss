@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400&display=swap'); // Padrão font-family: 'Sofia Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap'); // font-family: 'Alkatra', cursive;
 @import './escuro.scss';
 @import './claro.scss';
 
@@ -7,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sofia Sans', sans-serif;
+
 }
 
 body {
@@ -251,7 +253,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        
+
         .moldura {
 
             .foto {
@@ -259,7 +261,7 @@ body {
                 width: 20rem;
                 border-radius: 1rem;
             }
-            
+
             .moldura-1 {
                 position: absolute;
                 width: 20rem;
@@ -268,7 +270,7 @@ body {
                 margin: -1em -1em;
                 transform: translate(-2em, -2em);
             }
-    
+
             .moldura-2 {
                 position: absolute;
                 width: 20rem;
@@ -278,11 +280,10 @@ body {
                 transform: translate(2em, 2em);
             }
         }
-    
+
         .txt {
             position: relative;
             width: 40%;
-            // right: 10%;
         }
     }
 
@@ -365,6 +366,11 @@ body {
     }
 
     .conteinerPar {
+
+        .imgTelaP {
+            display: none;
+        }
+
         .semanaDivisor {
             left: 55%;
         }
@@ -455,15 +461,210 @@ footer {
     }
 }
 
-.copyright{
+.copyright {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
     padding-bottom: 1em;
 
     p {
         padding: .5em;
         border-radius: 1em;
     }
+}
+
+// Tela de 320px até 425px
+@media screen and (max-width: 425px) {
+    body {
+        .barraSuperior {
+            padding: .5em;
+            background: rgba(#000, .3);
+            width: auto;
+
+            .navbar {
+                gap: 1em;
+            }
+        }
+        .secao01 {
+            .cabecalho {
+                padding: .1rem;
+                .logo {
+                    display: none;
+                }
+            }
+        }
+    }
+    .mascara {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .video {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+    .titulo {
+        font-size: 1.2em;
+    }
+    .tituloPag {
+        display: none;
+    }
+    .areaMenu {
+        position: absolute;
+        top: calc(100vh - 20%);
+        left: 0;
+        z-index: 1;
+        .itemMenu {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: .5em;
+            transition: 0.2s;
+            transform: rotate(calc(360deg/4 * var(--i)));
+            transform-origin: 8em;
+            transition-delay: calc(0.2s * var(--i));
+            scale: 0;
+            .subItem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                font-weight: 600;
+                padding: 1em;
+                width: auto;
+                height: auto;
+                transform: rotate(calc(-360deg/4 * var(--i)));
+                transition: .2s;
+                cursor: pointer;
+                text-decoration: none;
+                backdrop-filter: blur(.3rem);
+            }
+        }
+    }
+    .areaAtiva {
+        .subItem:hover {
+            font-size: 1.1rem;
+        }
+    }
+    .divisor {
+        display: none;
+    }
+    .secao02 {
+        display: flex;
+        flex-direction: column;
+        padding: 1em .8em 1em .8em;
+        .titulo {
+            margin-bottom: 1.2em;
+        }
+        .bloco {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            .moldura {
+                margin-bottom: 1.5em;
+                .foto {
+                    width: 15em;
+                    border-radius: 1rem;
+                }
+                .moldura-1 {
+                    width: 15em;
+                    height: 15em;
+                    margin: -.5em -.5em;
+                    transform: translate(-.5em, -.5em);
+                }
+                .moldura-2 {
+                    width: 15em;
+                    height: 15em;
+                    margin: 3em .5em;
+                    transform: translate(.5em, .5em);
+                }
+            }
+            .txt {
+                position: relative;
+                width: 90%;
+            }
+        }
+    }
+    .secao03 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .atualizacao { font-weight: 500; }
+        .conteiner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: .5em 0;
+            .areaSemana {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .img {
+                width: 15rem;
+                height: auto;
+                margin: 2em 0;
+            }
+            .semanaDivisor { display: none; }
+            .textoSemana {
+                width: 90%;
+                height: auto;
+                margin-bottom: 2rem;
+                z-index: -1;
+            }
+            .textoSemana {
+                h2 { font-size: 1.2em; }
+                h3 { font-size: 1em; }
+            }
+        }
+        .conteinerImpar {
+            .semanaDivisor {
+                left: 0%;
+            }
+
+            .areaSemana {
+                align-items: center;
+            }
+        }
+        .conteinerPar {
+            .imgFiltro { display: none; }
+            .imgTelaP { display: inline; }
+            .semanaDivisor {
+                left: 0%;
+            }
+            .areaSemana {
+                align-items: center;
+            }
+        }
+    }
+
+    .secao04 {
+        padding: 1em 1.5em;
+
+        .box {
+            margin-top: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1em 1.5em;
+        gap: 1em;
+    }
+
 }
