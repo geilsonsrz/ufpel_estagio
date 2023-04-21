@@ -505,7 +505,7 @@ footer .parte {
   }
   .secao01 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
   }
   .secao01 .cabecalho .logo {
     width: 3em;
@@ -544,6 +544,7 @@ footer .parte {
     align-items: center;
     justify-content: center;
     padding: 0.5em 0.4em;
+    height: auto;
   }
   .secao02 .titulo {
     margin-bottom: 1.2em;
@@ -553,15 +554,13 @@ footer .parte {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    overflow: hidden;
-    background: red;
   }
   .secao02 .bloco .moldura {
     margin-bottom: 1.5em;
   }
   .secao02 .bloco .moldura .foto {
     width: 13em;
-    border-radius: 1rem;
+    border-radius: 1em;
   }
   .secao02 .bloco .moldura .moldura-1 {
     width: 13em;
@@ -585,9 +584,10 @@ footer .parte {
     align-items: center;
     justify-content: center;
     padding: 0;
+    overflow-y: hidden;
   }
   .secao03 .atualizacao {
-    font-weight: 500;
+    font-weight: 300;
   }
   .secao03 .conteiner {
     display: flex;
@@ -601,15 +601,15 @@ footer .parte {
     justify-content: center;
   }
   .secao03 .conteiner .img {
-    width: 15rem;
+    width: 10rem;
     height: auto;
-    margin: 2em 0;
+    margin: 3em 0;
   }
   .secao03 .conteiner .semanaDivisor {
     display: none;
   }
   .secao03 .conteiner .textoSemana {
-    width: 90%;
+    width: 80%;
     height: auto;
     margin-bottom: 2rem;
     z-index: -1;
