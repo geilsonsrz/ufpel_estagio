@@ -3,12 +3,12 @@
 @import './escuro.scss';
 @import './claro.scss';
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sofia Sans', sans-serif;
-
 }
 
 body {
@@ -92,6 +92,7 @@ body {
         z-index: -1;
         user-select: none;
         mix-blend-mode: screen;
+        user-select: none;
     }
 
     .video {
@@ -473,117 +474,101 @@ footer {
     }
 }
 
-// Tela de 320px até 425px
-@media screen and (max-width: 425px) {
-    body {
-        .barraSuperior {
-            padding: .5em;
-            background: rgba(#000, .3);
-            width: auto;
 
-            .navbar {
-                gap: 1em;
+@media (min-width: 320px) and (max-width: 425px) {
+
+
+    * {
+        font-family: 'Alkatra', cursive;
+    }
+
+    .secao {
+        width: 100%;
+        min-height: 100vh;
+        font-size: .8em;
+    }
+
+    .secao01 {
+        width: 100%;
+        height: 100vh;
+
+        .cabecalho {
+            .logo {
+                width: 3em;
             }
         }
-        .secao01 {
-            .cabecalho {
-                padding: .1rem;
-                .logo {
-                    display: none;
-                }
-            }
-        }
     }
-    .mascara {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-    .video {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -2;
-    }
-    .titulo {
-        font-size: 1.2em;
-    }
+
     .tituloPag {
-        display: none;
-    }
-    .areaMenu {
-        position: absolute;
-        top: calc(100vh - 20%);
-        left: 0;
+        width: 100%;
+        height: 95vh;
+        align-items: end;
         z-index: 1;
+    }
+
+    .titulo {
+        font-size: 1em;
+    }
+
+    .areaMenu {
+        display: none;
+
         .itemMenu {
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            left: .5em;
-            transition: 0.2s;
-            transform: rotate(calc(360deg/4 * var(--i)));
-            transform-origin: 8em;
-            transition-delay: calc(0.2s * var(--i));
-            scale: 0;
+            display: none;
+
             .subItem {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                font-weight: 600;
-                padding: 1em;
-                width: auto;
-                height: auto;
-                transform: rotate(calc(-360deg/4 * var(--i)));
-                transition: .2s;
-                cursor: pointer;
-                text-decoration: none;
-                backdrop-filter: blur(.3rem);
+                display: none;
             }
         }
     }
-    .areaAtiva {
-        .subItem:hover {
-            font-size: 1.1rem;
-        }
+
+    .btn {
+        padding: 1rem;
+        height: 2rem;
+        border-radius: .3rem;
+        font-size: 1.1em;
+        font-weight: 500;
     }
+
     .divisor {
         display: none;
     }
+
     .secao02 {
         display: flex;
         flex-direction: column;
-        padding: 1em .8em 1em .8em;
+        align-items: center;
+        justify-content: center;
+        padding: .5em .4em;
+
         .titulo {
             margin-bottom: 1.2em;
         }
+
         .bloco {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+            overflow: hidden;
+            background: red;
+
             .moldura {
                 margin-bottom: 1.5em;
                 .foto {
-                    width: 15em;
+                    width: 13em;
                     border-radius: 1rem;
                 }
                 .moldura-1 {
-                    width: 15em;
-                    height: 15em;
+                    width: 13em;
+                    height: 13em;
                     margin: -.5em -.5em;
                     transform: translate(-.5em, -.5em);
                 }
                 .moldura-2 {
-                    width: 15em;
-                    height: 15em;
-                    margin: 3em .5em;
+                    width: 13em;
+                    height: 13em;
+                    margin: 2.5em .5em;
                     transform: translate(.5em, .5em);
                 }
             }
@@ -593,6 +578,7 @@ footer {
             }
         }
     }
+
     .secao03 {
         display: flex;
         flex-direction: column;
@@ -665,6 +651,10 @@ footer {
         justify-content: space-between;
         margin: 1em 1.5em;
         gap: 1em;
+        font-size: .7em;
     }
+
+
+
 
 }

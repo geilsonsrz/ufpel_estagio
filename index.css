@@ -170,6 +170,7 @@ body .mascara {
   z-index: -1;
   user-select: none;
   mix-blend-mode: screen;
+  user-select: none;
 }
 body .video {
   position: absolute;
@@ -493,77 +494,46 @@ footer .parte {
   border-radius: 1em;
 }
 
-@media screen and (max-width: 425px) {
-  body .barraSuperior {
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.3);
-    width: auto;
+@media (min-width: 320px) and (max-width: 425px) {
+  * {
+    font-family: "Alkatra", cursive;
   }
-  body .barraSuperior .navbar {
-    gap: 1em;
-  }
-  body .secao01 .cabecalho {
-    padding: 0.1rem;
-  }
-  body .secao01 .cabecalho .logo {
-    display: none;
-  }
-  .mascara {
-    position: relative;
+  .secao {
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    min-height: 100vh;
+    font-size: 0.8em;
   }
-  .video {
-    position: relative;
-    top: 0;
-    left: 0;
+  .secao01 {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+    height: 100vh;
   }
-  .titulo {
-    font-size: 1.2em;
+  .secao01 .cabecalho .logo {
+    width: 3em;
   }
   .tituloPag {
-    display: none;
-  }
-  .areaMenu {
-    position: absolute;
-    top: calc(100vh - 20%);
-    left: 0;
+    width: 100%;
+    height: 95vh;
+    align-items: end;
     z-index: 1;
   }
+  .titulo {
+    font-size: 1em;
+  }
+  .areaMenu {
+    display: none;
+  }
   .areaMenu .itemMenu {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0.5em;
-    transition: 0.2s;
-    transform: rotate(calc(90deg * var(--i)));
-    transform-origin: 8em;
-    transition-delay: calc(0.2s * var(--i));
-    scale: 0;
+    display: none;
   }
   .areaMenu .itemMenu .subItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    font-weight: 600;
-    padding: 1em;
-    width: auto;
-    height: auto;
-    transform: rotate(calc(-90deg * var(--i)));
-    transition: 0.2s;
-    cursor: pointer;
-    text-decoration: none;
-    backdrop-filter: blur(0.3rem);
+    display: none;
   }
-  .areaAtiva .subItem:hover {
-    font-size: 1.1rem;
+  .btn {
+    padding: 1rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    font-size: 1.1em;
+    font-weight: 500;
   }
   .divisor {
     display: none;
@@ -571,7 +541,9 @@ footer .parte {
   .secao02 {
     display: flex;
     flex-direction: column;
-    padding: 1em 0.8em 1em 0.8em;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 0.4em;
   }
   .secao02 .titulo {
     margin-bottom: 1.2em;
@@ -581,24 +553,26 @@ footer .parte {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
+    background: red;
   }
   .secao02 .bloco .moldura {
     margin-bottom: 1.5em;
   }
   .secao02 .bloco .moldura .foto {
-    width: 15em;
+    width: 13em;
     border-radius: 1rem;
   }
   .secao02 .bloco .moldura .moldura-1 {
-    width: 15em;
-    height: 15em;
+    width: 13em;
+    height: 13em;
     margin: -0.5em -0.5em;
     transform: translate(-0.5em, -0.5em);
   }
   .secao02 .bloco .moldura .moldura-2 {
-    width: 15em;
-    height: 15em;
-    margin: 3em 0.5em;
+    width: 13em;
+    height: 13em;
+    margin: 2.5em 0.5em;
     transform: translate(0.5em, 0.5em);
   }
   .secao02 .bloco .txt {
@@ -679,6 +653,7 @@ footer .parte {
     justify-content: space-between;
     margin: 1em 1.5em;
     gap: 1em;
+    font-size: 0.7em;
   }
 }
 
