@@ -14,15 +14,18 @@ tema.addEventListener('click', mudarTema)
 // Bloco para o menu
 const menu = document.querySelector('.menu')
 const areaMenu = document.querySelector('.areaMenu')
+const menuMenor = document.querySelector('.areaMenuMenor')
 function clicouMenu(){
     menu.classList.toggle('ativo')
     areaMenu.classList.toggle('areaAtiva')
+    menuMenor.classList.toggle('menuMenorAtivo')
 }
 menu.addEventListener('click', clicouMenu)
 
 
 // Scroll suave seções
 const itemMenu = document.querySelectorAll('.areaMenu li a[href^="#"]')
+const itemMenuMenor = document.querySelectorAll('.areaMenuMenor li a[href^="#"]')
 function scrollItem(event) {
     event.preventDefault()
     const elemento = event.target
@@ -37,6 +40,9 @@ function scrollItem(event) {
 }
 // Função scroll das seções
 itemMenu.forEach( item => {
+    item.addEventListener('click', scrollItem)
+})
+itemMenuMenor.forEach( item => {
     item.addEventListener('click', scrollItem)
 })
 

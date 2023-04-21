@@ -258,6 +258,10 @@ body .video {
   font-weight: 600;
 }
 
+.areaMenuMenor {
+  display: none;
+}
+
 .divisor {
   position: absolute;
   width: 100%;
@@ -494,14 +498,54 @@ footer .parte {
   border-radius: 1em;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 767px) {
   * {
     font-family: "Alkatra", cursive;
+  }
+  .areaMenuMenor {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 50vh;
+    margin: 30% 0.5em;
+    padding: 0em 0.3em;
+    border-radius: 2em;
+    list-style: none;
+    left: -10em;
+    transition: 0.7s ease-in-out;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.1em);
+  }
+  .areaMenuMenor li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+  }
+  .areaMenuMenor li a {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    text-decoration: none;
+    z-index: 2;
+  }
+  .areaMenuMenor li svg {
+    scale: 2;
+    z-index: 1;
+  }
+  .menuMenorAtivo {
+    left: 0;
   }
   .secao {
     width: 100%;
     min-height: 100vh;
     font-size: 0.8em;
+    overflow: hidden;
   }
   .secao01 {
     width: 100%;
@@ -519,13 +563,13 @@ footer .parte {
   .titulo {
     font-size: 1em;
   }
-  .areaMenu {
+  .menuMaior {
     display: none;
   }
-  .areaMenu .itemMenu {
+  .menuMaior .itemMenu {
     display: none;
   }
-  .areaMenu .itemMenu .subItem {
+  .menuMaior .itemMenu .subItem {
     display: none;
   }
   .btn {
@@ -654,6 +698,13 @@ footer .parte {
     margin: 1em 1.5em;
     gap: 1em;
     font-size: 0.7em;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) and (min-width: 425px) {
+  .secao03 .img {
+    width: 20rem;
+    height: auto;
+    margin: 3em 0;
   }
 }
 

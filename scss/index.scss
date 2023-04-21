@@ -191,6 +191,10 @@ body {
     }
 }
 
+.areaMenuMenor {
+    display: none;
+}
+
 .divisor {
     position: absolute;
     width: 100%;
@@ -475,16 +479,64 @@ footer {
 }
 
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 767px) {
 
     * {
         font-family: 'Alkatra', cursive;
     }
 
+    .areaMenuMenor {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 20%;
+        height: 50vh;
+        margin: 30% .5em;
+        padding: 0em .3em;
+        border-radius: 2em;
+        list-style: none;
+        left: -10em;
+        transition: .7s ease-in-out;
+        z-index: 1000;
+        background: rgba(#000, .1);
+        backdrop-filter: blur(.1em);
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: .5em;
+
+            a {
+                position: absolute;
+                width: 2em;
+                height: 2em;
+                background: transparent;
+                text-decoration: none;
+                z-index: 2;
+            }
+
+            svg {
+                scale: 2;
+                z-index: 1;
+            }
+        }
+
+    }
+
+    .menuMenorAtivo {
+        left: 0;
+    }
+
+
+
     .secao {
         width: 100%;
         min-height: 100vh;
         font-size: .8em;
+        overflow: hidden;
     }
 
     .secao01 {
@@ -509,7 +561,7 @@ footer {
         font-size: 1em;
     }
 
-    .areaMenu {
+    .menuMaior {
         display: none;
 
         .itemMenu {
@@ -682,7 +734,16 @@ footer {
         font-size: .7em;
     }
 
-
-
+    @media (min-width: 425px) {
+        .secao03 {
+    
+                .img {
+                    width: 20rem;
+                    height: auto;
+                    margin: 3em 0;
+                }
+            }
+        
+    }
 
 }
