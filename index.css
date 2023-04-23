@@ -22,6 +22,12 @@ body.escuro .subItem {
 body.escuro .areaAtiva .subItem:hover {
   color: #0ccdfd;
 }
+body.escuro .areaMenuMenor {
+  background: rgba(12, 205, 253, 0.25);
+  box-shadow: 0 0 1em 0.05em #0ccdfd;
+  border: solid 0.05em rgba(12, 205, 253, 0.5);
+  backdrop-filter: blur(0.1em);
+}
 body.escuro .mascara {
   filter: invert(1);
   mix-blend-mode: multiply;
@@ -59,6 +65,25 @@ body.escuro .secao03 .conteiner .img:hover {
   transform: scale(1.1);
 }
 
+body.escuro::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent;
+}
+
+body.escuro::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background: #ffbd59;
+}
+
+body.escuro::-webkit-scrollbar-track {
+  border-radius: 1em;
+  background-color: transparent;
+}
+
+body.escuro::-webkit-scrollbar-thumb:hover {
+  background: #0ccdfd;
+}
+
 body.claro {
   background: #fff;
   color: #000;
@@ -80,6 +105,10 @@ body.claro .subItem {
 }
 body.claro .areaAtiva .subItem:hover {
   background: rgba(12, 205, 253, 0.2);
+}
+body.claro .areaMenuMenor {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.1em);
 }
 body.claro .divisor {
   background-image: linear-gradient(to right, transparent, #000, transparent);
@@ -109,6 +138,25 @@ body.claro .copyright p {
 }
 body.claro .secao03 .conteiner .img:hover {
   transform: scale(1.1);
+}
+
+body.claro::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent;
+}
+
+body.claro::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background: #ffbd59;
+}
+
+body.claro::-webkit-scrollbar-track {
+  border-radius: 1em;
+  background-color: transparent;
+}
+
+body.claro::-webkit-scrollbar-thumb:hover {
+  background: #ff66c4;
 }
 
 * {
@@ -540,8 +588,6 @@ footer .parte {
     left: -10em;
     transition: 0.7s ease-in-out;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.1em);
   }
   .areaMenuMenor li {
     display: flex;

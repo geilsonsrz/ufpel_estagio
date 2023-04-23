@@ -15,7 +15,7 @@ body.escuro {
         color: #fff;
         background: rgba(#0ccdfd, .1);
         box-shadow: 0 .5rem 2rem rgba(#0ccdfd, .2);
-        border:  .1rem solid rgba(#000, .4);
+        border: .1rem solid rgba(#000, .4);
         border-right: .1rem solid rgba(#000, .4);
         border-bottom: .1rem solid rgba(#000, .4);
         border-radius: .5rem;
@@ -27,17 +27,23 @@ body.escuro {
         }
     }
 
+    .areaMenuMenor {
+        background: rgba(#0ccdfd, .25);
+        box-shadow: 0 0 1em 0.05em #0ccdfd;
+        border: solid 0.05em rgba(#0ccdfd, 0.5);
+        backdrop-filter: blur(.1em);
+    }
+
     .mascara {
         filter: invert(1);
         mix-blend-mode: multiply;
     }
 
     .divisor {
-        background-image: linear-gradient(
-        to right,
-        transparent,
-        #fff,
-        transparent);
+        background-image: linear-gradient(to right,
+                transparent,
+                #fff,
+                transparent);
     }
 
     .moldura {
@@ -46,10 +52,12 @@ body.escuro {
         }
 
     }
+
     .moldura-1 {
         background: rgba(#0ccdfd, 1);
         box-shadow: -0.5em -0.5em 2em .2em #0ccdfd;
     }
+
     .moldura-2 {
         background: rgba(#ff66c4, 1);
         box-shadow: 0.5em 1.5em 2em .2em #ff66c4;
@@ -71,12 +79,12 @@ body.escuro {
         background-image: linear-gradient(to bottom, #fff, transparent);
     }
 
-    .copyright{
+    .copyright {
         p {
             border: .1em solid #fff;
         }
     }
-    
+
     .secao03 {
         .conteiner {
             .img:hover {
@@ -85,4 +93,20 @@ body.escuro {
         }
     }
 
+}
+
+body.escuro::-webkit-scrollbar {
+    width: 0.5em;
+    background: transparent;
+}
+body.escuro::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background: #ffbd59;
+}
+body.escuro::-webkit-scrollbar-track {
+    border-radius: 1em;
+    background-color: transparent
+}
+body.escuro::-webkit-scrollbar-thumb:hover {
+    background: #0ccdfd;
 }

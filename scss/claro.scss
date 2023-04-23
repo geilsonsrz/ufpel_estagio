@@ -27,6 +27,11 @@ body.claro {
         }
     }
 
+    .areaMenuMenor {
+        background: rgba(#000, .1);
+        backdrop-filter: blur(.1em);
+    }
+
     .divisor {
         background-image: linear-gradient(
         to right,
@@ -75,4 +80,20 @@ body.claro {
         }
     }
 
+}
+
+body.claro::-webkit-scrollbar {
+    width: 0.5em;
+    background: transparent;
+}
+body.claro::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background: #ffbd59;
+}
+body.claro::-webkit-scrollbar-track {
+    border-radius: 1em;
+    background-color: transparent
+}
+body.claro::-webkit-scrollbar-thumb:hover {
+    background: #ff66c4;
 }
