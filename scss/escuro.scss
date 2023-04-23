@@ -40,6 +40,21 @@ body.escuro {
         transparent);
     }
 
+    .moldura {
+        .foto {
+            border: .3rem solid #ffbd59;
+        }
+
+    }
+    .moldura-1 {
+        background: rgba(#0ccdfd, 1);
+        box-shadow: -0.5em -0.5em 2em .2em #0ccdfd;
+    }
+    .moldura-2 {
+        background: rgba(#ff66c4, 1);
+        box-shadow: 0.5em 1.5em 2em .2em #ff66c4;
+    }
+
     .imgFiltro {
         filter: invert(1);
     }
@@ -61,4 +76,13 @@ body.escuro {
             border: .1em solid #fff;
         }
     }
+    
+    .secao03 {
+        .conteiner {
+            .img:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
 }

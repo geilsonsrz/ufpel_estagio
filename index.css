@@ -29,6 +29,17 @@ body.escuro .mascara {
 body.escuro .divisor {
   background-image: linear-gradient(to right, transparent, #fff, transparent);
 }
+body.escuro .moldura .foto {
+  border: 0.3rem solid #ffbd59;
+}
+body.escuro .moldura-1 {
+  background: #0ccdfd;
+  box-shadow: -0.5em -0.5em 2em 0.2em #0ccdfd;
+}
+body.escuro .moldura-2 {
+  background: #ff66c4;
+  box-shadow: 0.5em 1.5em 2em 0.2em #ff66c4;
+}
 body.escuro .imgFiltro {
   filter: invert(1);
 }
@@ -43,6 +54,9 @@ body.escuro .semanaDivisor {
 }
 body.escuro .copyright p {
   border: 0.1em solid #fff;
+}
+body.escuro .secao03 .conteiner .img:hover {
+  transform: scale(1.1);
 }
 
 body.claro {
@@ -74,10 +88,12 @@ body.claro .moldura .foto {
   border: 0.3rem solid #ffbd59;
 }
 body.claro .moldura-1 {
-  background: rgba(12, 205, 253, 0.5);
+  background: #0ccdfd;
+  box-shadow: -0.5em -0.5em 0.3em 0.1em #0ccdfd;
 }
 body.claro .moldura-2 {
-  background: rgba(255, 102, 196, 0.5);
+  background: #ff66c4;
+  box-shadow: 0.5em 1.5em 0.3em 0.1em #ff66c4;
 }
 body.claro .btn {
   color: #000;
@@ -90,6 +106,9 @@ body.claro .semanaDivisor {
 }
 body.claro .copyright p {
   border: 0.1em solid #000;
+}
+body.claro .secao03 .conteiner .img:hover {
+  transform: scale(1.1);
 }
 
 * {
@@ -108,7 +127,7 @@ body .barraSuperior {
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 1rem;
+  padding: 1em;
   transition: ease 0.4s;
   background: transparent;
   z-index: 10;
@@ -117,7 +136,7 @@ body .barraSuperior .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1em;
 }
 body .tema {
   display: flex;
@@ -132,17 +151,17 @@ body .menu {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: 1.5rem;
-  height: 1rem;
+  width: 1.5em;
+  height: 1em;
   z-index: 1000;
   cursor: pointer;
 }
 body .menu .ln {
   position: relative;
   width: 100%;
-  height: 0.1rem;
+  height: 0.1em;
   transition: 0.5s ease-in-out;
-  border-radius: 1rem;
+  border-radius: 1em;
   z-index: 10;
 }
 body .secao {
@@ -153,7 +172,7 @@ body .secao01 .cabecalho {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1em;
 }
 body .secao01 .cabecalho .logo {
   position: absolute;
@@ -199,13 +218,13 @@ body .video {
   transition: 0.5s;
 }
 .menu.ativo .ln1 {
-  transform: rotate(-45deg) translate(-0.2rem, 0.2rem);
+  transform: rotate(-45deg) translate(-0.2em, 0.2em);
 }
 .menu.ativo .ln2 {
   opacity: 0;
 }
 .menu.ativo .ln3 {
-  transform: rotate(45deg) translate(-0.4rem, -0.4rem);
+  transform: rotate(45deg) translate(-0.4em, -0.4em);
 }
 
 .areaMenu {
@@ -213,8 +232,8 @@ body .video {
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 0rem;
-  height: 0rem;
+  width: 0em;
+  height: 0em;
   top: 50%;
   left: calc(50% - 15em);
   background: rgba(0, 0, 0, 0.3);
@@ -229,7 +248,7 @@ body .video {
   left: 0;
   transition: 0.2s;
   transform: rotate(calc(90deg * var(--i)));
-  transform-origin: 15rem;
+  transform-origin: 15em;
   transition-delay: calc(0.2s * var(--i));
   scale: 0;
 }
@@ -239,21 +258,21 @@ body .video {
   justify-content: center;
   position: relative;
   font-weight: 600;
-  padding: 1.5rem;
-  width: 10rem;
-  height: 5rem;
+  padding: 1.5em;
+  width: 10em;
+  height: 5em;
   transform: rotate(calc(-90deg * var(--i)));
   transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
-  backdrop-filter: blur(0.3rem);
+  backdrop-filter: blur(0.3em);
 }
 
 .areaAtiva .itemMenu {
   scale: 1;
 }
 .areaAtiva .subItem:hover {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -265,7 +284,7 @@ body .video {
 .divisor {
   position: absolute;
   width: 100%;
-  height: 0.1rem;
+  height: 0.1em;
 }
 
 .btn {
@@ -273,13 +292,13 @@ body .video {
   align-items: center;
   justify-content: center;
   width: auto;
-  padding: 2rem;
-  height: 3rem;
+  padding: 2em;
+  height: 3em;
   position: relative;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 0.3em;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 700;
   transition: 0.3 ease all;
   background-color: none;
@@ -324,27 +343,32 @@ body .video {
 .secao02 .bloco .moldura .foto {
   position: relative;
   width: 20rem;
-  border-radius: 1rem;
+  border-radius: 1em;
+}
+.secao02 .bloco .moldura .foto:hover {
+  transform: scale(1.02);
 }
 .secao02 .bloco .moldura .moldura-1 {
   position: absolute;
   width: 20rem;
   height: 23rem;
-  border-radius: 1rem;
-  margin: -1em -1em;
-  transform: translate(-2em, -2em);
+  border-radius: 1em;
 }
 .secao02 .bloco .moldura .moldura-2 {
   position: absolute;
   width: 20rem;
   height: 23rem;
-  border-radius: 1rem;
-  margin: 1em 1em;
-  transform: translate(2em, 2em);
+  border-radius: 1em;
 }
 .secao02 .bloco .txt {
   position: relative;
   width: 40%;
+}
+.secao02 .bloco .txt p {
+  transition: 0.5s ease-in-out all;
+}
+.secao02 .bloco .txt p:hover {
+  transform: scale(1.01);
 }
 
 .secao03 {
@@ -508,10 +532,9 @@ footer .parte {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 15%;
     height: 50vh;
     margin: 30% 0.5em;
-    padding: 0em 0.3em;
     border-radius: 2em;
     list-style: none;
     left: -10em;
@@ -524,7 +547,6 @@ footer .parte {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5em;
   }
   .areaMenuMenor li a {
     position: absolute;
@@ -609,14 +631,10 @@ footer .parte {
   .secao02 .bloco .moldura .moldura-1 {
     width: 13em;
     height: 13em;
-    margin: -0.5em -0.5em;
-    transform: translate(-0.5em, -0.5em);
   }
   .secao02 .bloco .moldura .moldura-2 {
     width: 13em;
     height: 13em;
-    margin: 2.5em 0.5em;
-    transform: translate(0.5em, 0.5em);
   }
   .secao02 .bloco .txt {
     position: relative;
@@ -700,11 +718,242 @@ footer .parte {
     font-size: 0.7em;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) and (min-width: 425px) {
+@media (min-width: 425px) {
+  .titulo {
+    font-size: 1.5em;
+  }
+  .secao02 .bloco .moldura {
+    margin-bottom: 1.5em;
+  }
+  .secao02 .bloco .moldura .foto {
+    width: 15em;
+    border-radius: 1em;
+  }
+  .secao02 .bloco .moldura .moldura-1 {
+    width: 15em;
+    height: 17em;
+  }
+  .secao02 .bloco .moldura .moldura-2 {
+    width: 15em;
+    height: 15em;
+  }
   .secao03 .img {
-    width: 20rem;
+    width: 20em;
     height: auto;
     margin: 3em 0;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .secao {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 0.8em;
+    overflow: hidden;
+  }
+  .titulo {
+    font-size: 2em;
+  }
+  .secao02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5em 0.4em;
+  }
+  .secao03 .atualizacao {
+    font-weight: 400;
+  }
+  .secao03 .conteiner {
+    margin: 3em 0;
+  }
+  .secao03 .conteiner .img {
+    width: 15em;
+    height: auto;
+    margin: 3em 0;
+  }
+  .secao03 .conteiner .semanaDivisor {
+    display: none;
+  }
+  .secao03 .conteiner .textoSemana {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2rem;
+    z-index: -1;
+  }
+  .secao03 .conteiner .textoSemana h2 {
+    font-size: 1.2em;
+  }
+  .secao03 .conteiner .textoSemana h3 {
+    font-size: 1em;
+  }
+  .secao03 .conteinerImpar .areaSemana {
+    align-items: center;
+  }
+  .secao03 .conteinerPar sssssssssssss .imgTelaP {
+    display: none;
+  }
+  .secao03 .conteinerPar .areaSemana {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .btn rect {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+  }
+  .secao02 .bloco {
+    display: flex;
+    flex-direction: column;
+  }
+  .semanaDivisor {
+    display: none;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .btn rect {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+  }
+  .secao02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3em 1em 3em 1em;
+  }
+  .secao02 .titulo {
+    margin-bottom: 2em;
+  }
+  .secao02 .bloco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .secao02 .bloco .moldura .foto {
+    position: relative;
+    width: 25rem;
+    border-radius: 1rem;
+  }
+  .secao02 .bloco .moldura .moldura-1 {
+    position: absolute;
+    width: 25rem;
+    height: 27rem;
+  }
+  .secao02 .bloco .moldura .moldura-2 {
+    position: absolute;
+    width: 25rem;
+    height: 27rem;
+  }
+  .secao02 .bloco .txt {
+    position: relative;
+    width: 40%;
+    font-size: 1.5em;
+  }
+  .secao04 {
+    padding: 1em 1.5em;
+  }
+  .secao04 .titulo {
+    font-size: 3em;
+  }
+  .secao04 .carta {
+    width: 20em;
+    height: 25em;
+  }
+  footer {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    transition: ease 0.7s;
+  }
+  body .barraSuperior {
+    padding: 2em;
+  }
+  body .barraSuperior .navbar {
+    gap: 2em;
+  }
+  body .tema {
+    transform: scale(1.5);
+  }
+  body .menu {
+    width: 2.5em;
+    height: 2em;
+  }
+  body .menu .ln {
+    height: 0.2em;
+  }
+  body .menu.ativo .ln1 {
+    transform: rotate(-45deg) translate(-0.4em, 0.4em);
+  }
+  body .menu.ativo .ln3 {
+    transform: rotate(45deg) translate(-0.6em, -0.6em);
+  }
+  body .secao01 .cabecalho .logo {
+    max-width: 7em;
+  }
+  .btn rect {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+  }
+  .titulo {
+    font-size: 3em;
+  }
+  .secao02 {
+    justify-content: space-evenly;
+  }
+  .secao02 .bloco {
+    font-size: 1.5em;
+  }
+  .secao02 .bloco .moldura .foto {
+    position: relative;
+    width: 18em;
+  }
+  .secao02 .bloco .moldura .moldura-1 {
+    width: 18em;
+    height: 20em;
+  }
+  .secao02 .bloco .moldura .moldura-2 {
+    position: absolute;
+    width: 18em;
+    height: 20em;
+  }
+  .secao03 .atualizacao {
+    font-size: 1em;
+  }
+  .secao03 .conteiner .img {
+    width: 20em;
+    height: 30em;
+    border-radius: 1em;
+  }
+  .secao03 .conteiner .semanaDivisor {
+    width: 0.3em;
+    height: 35em;
+    border-radius: 1em;
+  }
+  .secao03 .conteiner .textoSemana {
+    width: 30em;
+    margin-bottom: 2em;
+    font-size: 1.2em;
+  }
+  .secao03 .conteiner .textoSemana h2 {
+    position: relative;
+    top: -2em;
+    left: 0%;
+    font-size: 2em;
+  }
+  .secao03 .conteiner .textoSemana h3 {
+    position: relative;
+    top: -1rem;
+    font-size: 1.5em;
+  }
+  .secao04 .carta {
+    width: 15em;
+    height: 20em;
   }
 }
 
